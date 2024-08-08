@@ -1,0 +1,49 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0; /* Background color for the page */
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    background: #333; /* Curtain color */
+    z-index: 1;
+    transition: transform 1s ease-in-out;
+}
+
+.left {
+    left: 0;
+    transform: translateX(0);
+}
+
+.right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.hidden {
+    display: none;
+}
+
+.left.transition {
+    transform: translateX(-100%);
+}
+
+.right.transition {
+    transform: translateX(100%);
+}
